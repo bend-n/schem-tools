@@ -1,0 +1,37 @@
+#!/bin/python
+import os
+import argparse
+
+parser = argparse.ArgumentParser()
+group = parser.add_mutually_exclusive_group()
+group.add_argument("-base64", help="input base64", nargs=1, type=str)
+group.add_argument("-msch", help="msch input file", nargs=1, type=str)
+parser.add_argument("-n", help="name", action="store_true")
+args = parser.parse_args()
+
+
+os.system("rm -rf /tmp/mindustry_schematics")
+os.system("mkdir /tmp/mindustry_schematics")
+execute = ""
+
+
+if args.base64:
+    execute = "base64.js"
+elif args.msch:
+    execute = "msch.js"
+
+
+if execute:
+    arg = args.base64[0] if args.base64 else args.msch[0]
+    command = f"node ~/blocks/schem_image/{execute} {arg} > /tmp/mindustry_schematics/name"
+    if os.system(command) != 0:
+        os.system(f"echo {arg}")
+        print("fuck")
+        exit(1)
+    with open("/tmp/mindustry_schematics/name", "r") as f:
+        name = f.readline()
+
+    os.system("rm -f /tmp/mindustry_schematics/name")
+    if args.n:
+        print(name)
+    # os.system("python ~/blocks/pix2msch/my.py -i '/tmp/mindustry_schematics/image.png' -o '/tmp/mindustry_schematics' -n '%s'" % name)

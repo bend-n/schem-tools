@@ -1,0 +1,3 @@
+[submodule "schem_creation/MSchemGen"]
+	path = schem_creation/MSchemGen
+	url = https://github.com/code-explorer786/MSchemGen
