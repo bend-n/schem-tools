@@ -1,0 +1,10 @@
+__pycache__/
+siphon.sh
+*.zip
+*.nim
+schem_creation/*.json
+*.msch
+node_modules/
+colors.json
+median.json
+.jshintrc

@@ -1,0 +1,7 @@
+{
+    "type": "module",
+    "dependencies": {
+        "argparse": "^2.0.1",
+        "mindustry-schematic-parser": "^4.1.7"
+    }
+}
