@@ -8,3 +8,7 @@ node_modules/
 colors.json
 median.json
 .jshintrc
+*.txt
+create*.sh
+image.png
+.vscode/
