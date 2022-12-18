@@ -3,6 +3,6 @@
     "dependencies": {
         "argparse": "^2.0.1",
         "clipboardy": "^3.0.0",
-        "mindustry-schematic-parser": "^4.2.0-alpha.1"
+        "mindustry-schematic-parser": "^4.2.0"
     }
 }
